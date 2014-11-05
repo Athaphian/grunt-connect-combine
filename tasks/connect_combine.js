@@ -11,7 +11,12 @@
 var grunt = require('grunt');
 var send = require('send');
 
-// Export the combine API.
+/**
+ * Export the combine API.
+ *
+ * Combines multiple directories behind one request. It searches for the file in each directory from top
+ * to bottom. I the file is found in one directory, the routine stops and returns this file.
+ */
 module.exports = function (regexp, paths) {
   return function (req, res, next) {
     // Match URL to regexp
