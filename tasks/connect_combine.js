@@ -8,6 +8,9 @@
 
 'use strict';
 
+var grunt = require('grunt');
+var send = require('send');
+
 // Export the combine API.
 module.exports = function (regexp, paths) {
   return function (req, res, next) {
